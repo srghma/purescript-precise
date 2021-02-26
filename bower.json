@@ -19,7 +19,7 @@
     "purescript-gen": "^3.0.0",
     "purescript-integers": "^5.0.0",
     "purescript-lists": "^6.0.0",
-    "purescript-numbers": "^7.0.0",
+    "purescript-numbers": "^8.0.0",
     "purescript-prelude": "^5.0.0",
     "purescript-strings": "^5.0.0"
   },
