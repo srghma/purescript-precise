@@ -17,6 +17,7 @@ module Data.HugeNum
   , ceil
   , round
   , googol
+  , subHugeNum
   , pow, (^)
   , truncate
   ) where
@@ -457,14 +458,6 @@ takeMeatyParts :: List Digit -> List Digit
 takeMeatyParts arr =
   L.reverse (L.dropWhile (_ == _zero) (L.reverse arr))
 
--- | Turn a `KRep` into a `HugeNum`.
-fromKRep :: KRep -> HugeNum
-fromKRep k = z where
-  bm = { sign: Plus, digits: _one : replicate (k.exp + 1) _zero, decimal: k.exp + 1 }
-  prod = k.coeff <> L.drop 1 bm.digits
-  leftSummand = HugeNum { digits: prod, sign: Plus, decimal: bm.decimal + L.length k.coeff - 1 }
-  z = plus leftSummand k.const
-
 -- | Turn a `HugeNum` into a `KRep`, given an exponent m for B^m.
 toKRep :: Int -> HugeNum -> KRep
 toKRep exp h@(HugeNum r) = z where
@@ -583,7 +576,7 @@ adjustDecimalForTriviality h1 h2 (HugeNum r3) = dropZeroes (HugeNum r) where
 
 -- | Raise a HugeNum to an integer power.
 pow :: HugeNum -> Int -> HugeNum
-pow r 0 = one
+pow _ 0 = one
 pow r 1 = r
 pow r n =
   let c = r * r
