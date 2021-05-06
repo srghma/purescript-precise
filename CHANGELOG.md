@@ -7,9 +7,15 @@ Notable changes to this project are documented in this file. The format is based
 Breaking changes:
 
 New features:
-- Export `HugeInt`'s `abs` and `neg` and `HugeNum`'s `subHugeNum`, both implemented by @Thimoteus (#25 by @JordanMartinez)
 
 Bugfixes:
+
+Other improvements:
+
+## [v5.1.0](https://github.com/purescript-contrib/purescript-precise/releases/tag/v5.1.0) - 2021-05-06
+
+New features:
+- Export `HugeInt`'s `abs` and `neg` and `HugeNum`'s `subHugeNum`, both implemented by @Thimoteus (#25 by @JordanMartinez)
 
 Other improvements:
 - Fix warnings revealed by v0.14.1 PS release, including the removal of `fromKRep` function (#25 by @JordanMartinez)
@@ -19,8 +25,6 @@ Other improvements:
 
 Breaking changes:
 - Added support for PureScript 0.14 and dropped support for all previous versions (#21 by @JordanMartinez, #22 by @kl0tl)
-
-New features:
 
 Bugfixes:
 - Fixed comparing negative `HugeNum` values and `HugeInt.toInt` returning `Nothing` for negative values (#20 by @vladciobanu)
