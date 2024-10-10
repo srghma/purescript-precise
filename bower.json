@@ -1,12 +1,6 @@
 {
   "name": "purescript-precise",
   "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "output"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/purescript-contrib/purescript-precise.git"
