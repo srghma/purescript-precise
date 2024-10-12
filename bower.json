@@ -1,8 +1,0 @@
-{
-  "name": "purescript-precise",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/purescript-contrib/purescript-precise.git"
-  }
-}
